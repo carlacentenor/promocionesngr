@@ -15,6 +15,11 @@
     <link rel="stylesheet" href="assets/slick-1.8.1/slick/slick.css">
     <link rel="stylesheet" href="assets/slick-1.8.1/slick/slick-theme.css">
 
+    <script>
+        window.dataLayer = window.dataLayer || [];
+    </script>
+
+
    <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -96,7 +101,12 @@
                     <div class="text-center container-btn">
                         <a target="_blank"
                             href="https://www.bembos.com.pe/menu/promociones-bembos-delivery/personal-bembos"
-                            class="button-buy button-bb">Comprar</a>
+                            class="button-buy button-bb"
+                            onclick="dataLayer.push({
+                                'foodCategory': 'Hamburguesa',
+                                'foodTitle': 'personal bembos',
+                                'foodBrand': 'Bembos'});"
+                            >Comprar</a>
                     </div>
                 </a>
             </div>
