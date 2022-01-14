@@ -15,9 +15,7 @@
     <link rel="stylesheet" href="assets/slick-1.8.1/slick/slick.css">
     <link rel="stylesheet" href="assets/slick-1.8.1/slick/slick-theme.css">
 
-    <script>
-        window.dataLayer = window.dataLayer || [];
-    </script>
+    
 
 
    <!-- Google Tag Manager -->
@@ -38,22 +36,22 @@
     <!-- Brands -->
     <header
         class="flex-brands-header d-flex flex-wrap justify-content-between align-items-center container brands-slider-mobile brand-js">
-        <div><a href="https://www.bembos.com.pe/menu/promociones-bembos-delivery" target="_blank"><img class="img-fluid"
+        <div class="brands-header" data-brand="Bembos"><a href="https://www.bembos.com.pe/menu/promociones-bembos-delivery" target="_blank"><img class="img-fluid"
                     src="assets/images/bb.png" alt="logo-bembos"></a></div>
-        <div><a href="https://papajohns.com.pe/promociones" target="_blank"><img class="img-fluid"
+        <div class="brands-header" data-brand="Papa Johns"><a href="https://papajohns.com.pe/promociones" target="_blank"><img class="img-fluid"
                     src="assets/images/pj.png" alt="logo-papajohns"></a></div>
-        <div><a href="https://www.popeyes.com.pe/promociones" target="_blank"><img class="img-fluid"
+        <div class="brands-header" data-brand="Popeyes"><a href="https://www.popeyes.com.pe/promociones" target="_blank"><img class="img-fluid"
                     src="assets/images/pp.png" alt="logo-popeyes"></a></div>
-        <div><a href="https://www.chinawok.com.pe/promociones.html/" target="_blank"><img class="img-fluid"
+        <div class="brands-header" data-brand="Chinawok"><a href="https://www.chinawok.com.pe/promociones.html/" target="_blank"><img class="img-fluid"
                     src="assets/images/cw.png" alt="logo-chinawok"></a></div>
-        <div><a href="https://dunkin.pe/promociones" target="_blank"><img class="img-fluid" src="assets/images/dd.png"
+        <div class="brands-header" data-brand="Dunkin"><a href="https://dunkin.pe/promociones" target="_blank"><img class="img-fluid" src="assets/images/dd.png"
                     alt="logo-dunkin"></a></div>
-        <div><a href="https://www.donbelisario.com.pe/promociones" target="_blank"><img class="img-fluid"
+        <div class="brands-header" data-brand="Don Belisario"><a href="https://www.donbelisario.com.pe/promociones" target="_blank"><img class="img-fluid"
                     src="assets/images/db.png" alt="logo-donbelisario"></a></div>
     </header>
     <main>
         <!-- Schedule general -->
-        <div class="banner-schedule pt-2 pb-2">
+        <div class="banner-schedule bn-schedule-js pt-2 pb-2">
             <a class="banner-text w100" href="#section-schedule">
                 <div class="d-flex container align-items-center w100 justify-content-center">
                     <div class="grid-text-banner">
@@ -79,7 +77,7 @@
         <!-- Promotions -->
         <section class="flex-promotions d-flex flex-wrap justify-content-around container">
             <!-- Promotions Bembos -->
-            <div class="card-promotion">
+            <div class="card-promotion" data-product="Personal Bembos" data-brand="Bembos">
                 <a target="_blank" href="https://www.bembos.com.pe/menu/promociones-bembos-delivery/personal-bembos">
                     <div class="position-relative">
                         <div class="target-percent position-absolute">
@@ -111,7 +109,7 @@
                 </a>
             </div>
             <!-- Promotions Papa Johns -->
-            <div class="card-promotion">
+            <div class="card-promotion"  data-product="Combo Clásico" data-brand="Papa Johns">
                 <a target="_blank" href="https://papajohns.com.pe/menu/desc/combo-grande-plaza-norte.html">
                     <div class="position-relative">
                         <div class="target-percent position-absolute">
@@ -140,7 +138,7 @@
 
 
             <!-- Promotion Popeyes -->
-            <div class="card-promotion">
+            <div class="card-promotion" data-product="Especial Popeyes" data-brand="Popeyes">
                 <a target="_blank" href="https://www.popeyes.com.pe/menu/promociones/especial-popeyes">
                     <div class="position-relative">
                         <div class="target-percent position-absolute">
@@ -167,7 +165,7 @@
                 </a>
             </div>
             <!-- Promotion Dunkin -->
-            <div class="card-promotion">
+            <div class="card-promotion" data-product="9 Donuts clásicas + gaseosa 1.5 L" data-brand="Dunkin">
                 <a target="_blank" href="https://dunkin.pe/promociones/9-donuts-y-1-gaseosa-familiar.html ">
                     <div class="position-relative">
                         <div class="target-percent position-absolute">
@@ -195,7 +193,7 @@
                 </a>
             </div>
             <!-- Promotion Chinawok -->
-            <div class="card-promotion">
+            <div class="card-promotion" data-product="Mostricrunch" data-brand="Chinawok">
                 <a target="_blank" href="https://www.chinawok.com.pe/menu/promociones/promo-mostricrunch.html">
                     <div class="position-relative">
                         <div class="target-percent position-absolute">
@@ -227,7 +225,7 @@
 
             
             <!-- Promotion Don Belisario -->
-            <div class="card-promotion">
+            <div class="card-promotion" data-product="Don Belimostro" data-brand="Don Belisario">
                 <a target="_blank" href="https://www.donbelisario.com.pe/menu/desc/don-belimostro-plaza-norte.html">
                     <div class="position-relative">
                         <div class="target-percent position-absolute">
@@ -257,7 +255,7 @@
 
 
             <!-- Promotions Bembos -->
-            <div class="card-promotion">
+            <div class="card-promotion"  data-product="Duo Bembos" data-brand="Bembos">
                 <a target="_blank" href="https://www.bembos.com.pe/menu/promociones-bembos-delivery/duo-bembos">
                     <div class="position-relative">
                         <div class="target-percent position-absolute">
@@ -283,7 +281,7 @@
                 </a>
             </div>
             <!-- Promotion Papa John's -->
-            <div class="card-promotion">
+            <div class="card-promotion"  data-product="Combo Familiar" data-brand="Papa Johns">
                 <a target="_blank" href="https://papajohns.com.pe/menu/desc/combo-familiar-plaza-norte.html">
                     <div class="position-relative">
                         <div class="target-percent position-absolute">
@@ -312,7 +310,7 @@
                 </a>
             </div>
             <!-- Promotion Popeyes -->
-            <div class="card-promotion">
+            <div class="card-promotion"  data-product="Combo Mix Power" data-brand="Popeyes">
                 <a target="_blank" href="https://www.popeyes.com.pe/menu/promociones/combo-mix-power">
                     <div class="position-relative">
                         <div class="target-percent position-absolute">
@@ -339,7 +337,7 @@
                 </a>
             </div>
             <!-- Promotion Dunkin -->
-            <div class="card-promotion">
+            <div class="card-promotion" data-product="Dunkin N Share" data-brand="Dunkin">
                 <a target="_blank" href="https://dunkin.pe/promociones/combo-verano.html/">
                     <div class="position-relative">
                         <div class="target-percent position-absolute">
@@ -367,7 +365,7 @@
             </div>
 
             <!-- Promotion Chinawok -->
-            <div class="card-promotion">
+            <div class="card-promotion" data-product="Súper Banquete en Familia" data-brand="Chinawok">
                 <a target="_blank" href="https://www.chinawok.com.pe/menu/promociones/super-banquete-en-familia.html">
                     <div class="position-relative">
                         <div class="target-percent position-absolute">
@@ -401,7 +399,7 @@
             </div>
 
             <!-- Promotion Don Belisario -->
-            <div class="card-promotion">
+            <div class="card-promotion" data-product="Promo Exclusiva Delivery" data-brand="Don Belisario">
                 <a target="_blank" href="https://www.donbelisario.com.pe/menu/desc/promo-exclusiva-delivery-plaza-norte.html">
                     <div class="position-relative">
                         <div class="target-percent position-absolute">
@@ -437,7 +435,7 @@
         <section class="container" id="section-schedule">
             <p class="title-schedule">*Horarios de delivery - Lima Norte </p>
             <div class="d-flex flex-wrap justify-content-around ">
-                <div class="card-schedule mb-4 ">
+                <div class="card-schedule  mb-4 " data-brand="Bembos">
                     <div class="d-flex justify-content-center container-shedule align-items-center">
                         <div>
                             <div class="text-center mb-2">
@@ -459,7 +457,7 @@
                     </div>
                 </div>
 
-                <div class="card-schedule mb-4 ">
+                <div class="card-schedule mb-4 " data-brand="Papa Johns">
                     <div class="d-flex justify-content-center container-shedule align-items-center">
                         <div>
                             <div class="text-center mb-2">
@@ -480,7 +478,7 @@
 
                     </div>
                 </div>
-                <div class="card-schedule mb-4 ">
+                <div class="card-schedule mb-4 " data-brand="Popeyes">
                     <div class="d-flex justify-content-center container-shedule align-items-center">
                         <div>
                             <div class="text-center mb-3">
@@ -501,7 +499,7 @@
 
                     </div>
                 </div>
-                <div class="card-schedule mb-4  ">
+                <div class="card-schedule mb-4  " data-brand="Chinawok">
                     <div class="d-flex justify-content-center container-shedule align-items-center">
                         <div>
                             <div class="text-center mb-2">
@@ -523,7 +521,7 @@
 
                     </div>
                 </div>
-                <div class="card-schedule  mb-4  ">
+                <div class="card-schedule  mb-4  " data-brand="Dunkin">
                     <div class="d-flex justify-content-center container-shedule align-items-center">
                         <div>
                             <div class="text-center mb-2">
@@ -545,7 +543,7 @@
                     </div>
                 </div>
 
-                <div class="card-schedule mb-4  ">
+                <div class="card-schedule mb-4  " data-brand="Don Belisario">
                     <div class="d-flex justify-content-center container-shedule align-items-center">
                         <div>
                             <div class="text-center mb-2">
