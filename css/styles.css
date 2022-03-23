@@ -355,7 +355,7 @@ a {
 
 
 
-.grid-text{
+.grid-text {
     display: grid;
     grid-template-rows: 55px 40px 25px;
     align-items: center;
@@ -584,7 +584,7 @@ a {
     font-family: var(--omnes-regular);
 }
 
-.target-percent{
+.target-percent {
     width: 58px;
     height: auto;
     background-color: #E31937;
@@ -598,7 +598,7 @@ a {
 }
 
 @media screen and (min-width:768px) {
-    .target-percent{
+    .target-percent {
         width: 75px;
         height: auto;
         background-color: #E31937;
@@ -612,7 +612,7 @@ a {
     }
 }
 
-.price-real{
+.price-real {
     text-decoration: line-through;
     color: var(--red-cw);
     font-size: 12px;
@@ -620,10 +620,17 @@ a {
 }
 
 @media screen and (min-width:768px) {
-    .price-real{
+    .price-real {
         text-decoration: line-through;
         color: var(--red-cw);
         font-size: 18px;
         padding-left: 10px;
     }
+}
+
+
+
+.banner-principal {
+    width: 100%;
+    object-fit: cover;
 }
