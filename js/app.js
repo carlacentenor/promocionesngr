@@ -16,6 +16,15 @@ if (mediaQuery.matches) {
 
 }
 
+
+var myModal = document.getElementById('myModal')
+var myInput = document.getElementById('myInput')
+
+myModal.addEventListener('shown.bs.modal', function () {
+  myInput.focus()
+})
+
+
 // Tag Manager
 
 const brandsHeader = document.querySelectorAll('.brands-header');
