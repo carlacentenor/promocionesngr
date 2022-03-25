@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/api.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta property="og:title" content="Promociones NGR">
-    <meta property=”og:url” content="https://promocionesngr.com/" />
+    <meta property=”og:url” content="http://promocionesngr.test:81" />
     <meta property=”og:site_name” content="Promociones NGR" />
     <meta name=" description" content="Disfruta de las mejores promociones" />
     <title>Promociones NGR</title>
@@ -132,6 +134,7 @@
                     </div>
 
                 </div>
+                <form>
                 <div class="form-user">
                     <div class="bg-form-gray">
                         <p class="text-center title-formu">Completa tus datos aquí </p>
@@ -139,54 +142,54 @@
                         <div class="container">
                             <div class="mb-4">
 
-                                <input type="email" class="form-control input-form" placeholder=" Nombre completo">
+                                <input type="text" id="name" name="name" class="form-control input-form" placeholder=" Nombre completo" required>
                                 <!-- Message Validation -->
-                                <!-- <div class="invalid-message">
-                                    *Campo obligatorio
-                                  </div> -->
+                                 <div id="msgName" class="invalid-message">
+                                    
+                                  </div> 
                             </div>
                             <div class="mb-4">
 
-                                <input type="email" class="form-control input-form" placeholder=" Correo electrónico">
-                                <!-- <div class="invalid-message">
-                                    *Campo obligatorio
-                                  </div> -->
+                                <input type="email" id="email" name="email" class="form-control input-form" placeholder=" Correo electrónico">
+                                 <div id = "msgEmail" class="invalid-message">
+                                    
+                                  </div>
                             </div>
                             <div class="mb-4">
 
-                                <input type="email" class="form-control input-form" placeholder=" Celular">
-                                <!-- <div class="invalid-message">
-                                    *Campo obligatorio
-                                  </div> -->
+                                <input type="number" id="phone" name="phone" class="form-control input-form" placeholder=" Celular">
+                                 <div  id = "msgPhone" class="invalid-message">
+                                    
+                                  </div>
                             </div>
                             <div class="mb-4">
 
-                                <input type="email" class="form-control input-form" placeholder=" DNI">
-                                <!-- <div class="invalid-message">
-                                    *Campo obligatorio
-                                  </div> -->
+                                <input type="number" id="dni" name="dni" class="form-control input-form" placeholder=" DNI">
+                                 <div id = "msgDni" class="invalid-message">
+                                    
+                                  </div>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" onclick="aceptar()">
                                 <label class="form-check-label text-legal-form" for="flexCheckDefault">
                                     Acepto los <a class="link-legal" data-bs-toggle="modal"
                                         data-bs-target="#staticBackdrop">Términos y Condiciones</a> y la política de Uso
                                     de <a class="link-legal">Datos Personales</a>
 
                                 </label>
-                                <!-- <div class="invalid-message">
+                                <!-- <div id="msgTerm" class="invalid-message">
                                     *Debe aceptar los términos y condiciones
                                   </div> -->
 
                             </div>
                             <div class="text-center mt-4">
-                                <button class="btn btn-primary btn-send" type="submit">Enviar</button>
+                                <button class="btn btn-primary btn-send" id="envioData" type="button" onclick="sendData()" disabled>Enviar</button>
                             </div>
 
                         </div>
                     </div>
                 </div>
-
+            </form>
             </div>
         </section>
 
@@ -487,8 +490,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
     </script>
-
+    
     <script src="js/app.js"></script>
+    
 </body>
 
 </html>
