@@ -23,7 +23,7 @@ if (mediaQuery.matches) {
         centerPadding: '60px',
         autoplay: true,
         autoplaySpeed: 2000,
-        arrows: false
+        arrows: true
   
   
       
