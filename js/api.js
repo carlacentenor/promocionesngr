@@ -109,6 +109,8 @@ function aceptar(){
       request.setRequestHeader("Access-Control-Allow-Origin", '*');
     },*/
     success: function (data) {
+
+        $("#confirmation").modal()
         //callback(data);
         console.log(JSON.stringify(data));
         //console.log(data);
