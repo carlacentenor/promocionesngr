@@ -135,57 +135,63 @@
                 </div>
                 <div class="form-user">
                     <div class="bg-form-gray">
-                        <p class="text-center title-formu">Completa tus datos aquí </p>
+                        <div>
+                            <p class="text-center title-formu">Completa tus datos aquí </p>
 
-                        <div class="container">
-                            <div class="mb-4">
+                            <div class="container">
+                                <div class="mb-4">
 
-                                <input type="email" class="form-control input-form" placeholder=" Nombre completo">
-                                <!-- Message Validation -->
-                                <!-- <div class="invalid-message">
-                                    *Campo obligatorio
-                                  </div> -->
+                                    <input type="email" class="form-control input-form" placeholder=" Nombre completo">
+                                    <!-- Message Validation -->
+                                    <!-- <div class="invalid-message">
+                                        *Campo obligatorio
+                                      </div> -->
+                                </div>
+                                <div class="mb-4">
+
+                                    <input type="email" class="form-control input-form"
+                                        placeholder=" Correo electrónico">
+                                    <!-- <div class="invalid-message">
+                                        *Campo obligatorio
+                                      </div> -->
+                                </div>
+                                <div class="mb-4">
+
+                                    <input type="email" class="form-control input-form" placeholder=" Celular">
+                                    <!-- <div class="invalid-message">
+                                        *Campo obligatorio
+                                      </div> -->
+                                </div>
+                                <div class="mb-4">
+
+                                    <input type="email" class="form-control input-form" placeholder=" DNI">
+                                    <!-- <div class="invalid-message">
+                                        *Campo obligatorio
+                                      </div> -->
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                    <label class="form-check-label text-legal-form" for="flexCheckDefault">
+                                        Acepto los <a class="link-legal" data-bs-toggle="modal"
+                                            data-bs-target="#staticBackdrop">Términos y Condiciones</a> y la política de
+                                        Uso
+                                        de <a class="link-legal" data-bs-toggle="modal"
+                                            data-bs-target="#staticBackdrop1">Datos Personales</a>
+
+                                    </label>
+                                    <!-- <div class="invalid-message">
+                                        *Debe aceptar los términos y condiciones
+                                      </div> -->
+
+                                </div>
+                                <div class="text-center mt-4">
+                                    <button class="btn btn-primary btn-send" type="submit" data-bs-toggle="modal"
+                                        data-bs-target="#confirmation">Enviar</button>
+                                </div>
+
                             </div>
-                            <div class="mb-4">
-
-                                <input type="email" class="form-control input-form" placeholder=" Correo electrónico">
-                                <!-- <div class="invalid-message">
-                                    *Campo obligatorio
-                                  </div> -->
-                            </div>
-                            <div class="mb-4">
-
-                                <input type="email" class="form-control input-form" placeholder=" Celular">
-                                <!-- <div class="invalid-message">
-                                    *Campo obligatorio
-                                  </div> -->
-                            </div>
-                            <div class="mb-4">
-
-                                <input type="email" class="form-control input-form" placeholder=" DNI">
-                                <!-- <div class="invalid-message">
-                                    *Campo obligatorio
-                                  </div> -->
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                <label class="form-check-label text-legal-form" for="flexCheckDefault">
-                                    Acepto los <a class="link-legal" data-bs-toggle="modal"
-                                        data-bs-target="#staticBackdrop">Términos y Condiciones</a> y la política de Uso
-                                    de <a class="link-legal" data-bs-toggle="modal"
-                                    data-bs-target="#staticBackdrop1">Datos Personales</a>
-
-                                </label>
-                                <!-- <div class="invalid-message">
-                                    *Debe aceptar los términos y condiciones
-                                  </div> -->
-
-                            </div>
-                            <div class="text-center mt-4">
-                                <button class="btn btn-primary btn-send" type="submit">Enviar</button>
-                            </div>
-
                         </div>
+
                     </div>
                 </div>
 
@@ -483,7 +489,7 @@
     </footer>
 
 
-    <!-- Modal 1 -->
+    <!-- Modal Legal 1 -->
     <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
         aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg modal-dialog-centered  modal-dialog-scrollable">
@@ -529,7 +535,7 @@
         </div>
     </div>
 
-    <!-- Modal 2 -->
+    <!-- Modal Legal 2 -->
     <div class="modal fade" id="staticBackdrop1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
         aria-labelledby="staticBackdropLabel1" aria-hidden="true">
         <div class="modal-dialog modal-lg modal-dialog-centered  modal-dialog-scrollable">
@@ -600,6 +606,38 @@
                 <div class="modal-footer justify-content-center">
 
                     <button type="button" class="btn btn-send" data-bs-dismiss="modal">Aceptar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Mensaje de Confirmación-->
+    <div class="modal fade" id="confirmation" tabindex="-1" aria-labelledby="confirmation" aria-hidden="true">
+        <div class="modal-dialog confirmation-mod modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel"></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="title-mod-style font-modal">
+                        Registro Exitoso
+                    </p>
+                    <div class="text-center">
+                        <img class="p-3" src="assets/images/ok.svg" alt="">
+                    </div>
+                    <p class="text-center modal-confirmation-body">
+                        Gracias por registrarte.
+
+                    </p>
+                    <p class="text-center modal-confirmation-body">
+                        Pronto recibiras Novedades y Promociones exclusivas.
+                    </p>
+
+                </div>
+                <div class="modal-footer d-flex justify-content-center">
+
+                    <button type="button" class="btn btn-primary btn-send" data-bs-dismiss="modal">Aceptar</button>
                 </div>
             </div>
         </div>
