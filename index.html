@@ -77,19 +77,20 @@
                 href="https://www.bembos.com.pe/menu/promociones-bembos-delivery" target="_blank"><img class="img-fluid"
                     src="assets/images/bb.png" alt="logo-bembos"></a></div>
         <div class="brands-header" data-brand="Papa Johns"><a href="https://papajohns.com.pe/promociones"
-                target="_blank"><img class="img-fluid" src="assets/images/logo-pj.svg" alt="logo-papajohns"></a></div>
+                target="_blank"><img class="img-fluid" src="assets/images/pj.png" alt="logo-papajohns"></a></div>
         <div class="brands-header" data-brand="Popeyes"><a href="https://www.popeyes.com.pe/promociones"
                 target="_blank"><img class="img-fluid" src="assets/images/pp.png" alt="logo-popeyes"></a></div>
         <div class="brands-header" data-brand="Chinawok"><a href="https://www.chinawok.com.pe/promociones.html/"
                 target="_blank"><img class="img-fluid" src="assets/images/cw.png" alt="logo-chinawok"></a></div>
         <div class="brands-header" data-brand="Dunkin"><a href="https://dunkin.pe/promociones" target="_blank"><img
-                    class="img-fluid" src="assets/images/logo-dd.svg" alt="logo-dunkin"></a></div>
+                    class="img-fluid" src="assets/images/dd.png" alt="logo-dunkin"></a></div>
         <div class="brands-header" data-brand="Don Belisario"><a href="https://www.donbelisario.com.pe/promociones"
                 target="_blank"><img class="img-fluid" src="assets/images/db.png" alt="logo-donbelisario"></a></div>
     </header>
     <main>
         <div class="w100">
-            <img class="banner-principal" src="assets/images/banner.jpg" alt="">
+            <img class="banner-principal hide-desktop " src="assets/images/banner.jpg" alt="">
+            <img class="banner-principal  hide-mobile" src="assets/images/bannermobile.jpg" alt="">
         </div>
 
         <!-- Title  -->
@@ -187,6 +188,7 @@
                             </div>
 
                         </div>
+
                     </div>
                 </div>
             </form>
@@ -194,7 +196,7 @@
         </section>
 
         <!-- Cards -->
-        <section class="container" >
+        <section class="container contain-respo">
             <div class="title-promotions container mt-4 mb-4">
                 <p class="mt-2 mb-0">¿Por qué comprar en el Cyber NGR?
 
@@ -202,39 +204,51 @@
 
             </div>
             <div class="d-flex justify-content-between responsive-card">
-                <div class="card-benefy">
-                    <p class="title-benefy">Pagos 100% Seguros</p>
-                    <div class="my-3">
-                        <img src="assets/images/icon-1.svg" alt="pagos">
+                <div class="card-contain">
+                    <div class="card-benefy">
+                        <p class="title-benefy">Pagos 100% Seguros</p>
+                        <div class="my-3 d-flex justify-content-center">
+                            <img src="assets/images/icon-1.svg" alt="pagos">
+                        </div>
+                        <p class="description-benefy">Tenemos certificado que garantiza tu información personal y de tus
+                            tarjetas de débito y crédito.
+                        </p>
                     </div>
-                    <p class="description-benefy">Tenemos certificado que garantiza tu información personal y de tus tarjetas de débito y crédito.
-                    </p>
                 </div>
-              
-                <div class="card-benefy">
-                    <p class="title-benefy">Compra Fácil</p>
-                    <div class="my-3">
-                        <img src="assets/images/icon-1.svg" alt="pagos">
+                <div class="card-contain">
+                    <div class="card-benefy">
+                        <p class="title-benefy">Compra Fácil</p>
+                        <div class="my-3 d-flex justify-content-center">
+                            <img src="assets/images/icon-1.svg" alt="pagos">
+                        </div>
+                        <p class="description-benefy">Tenemos certificado que garantiza tu información personal y de tus
+                            tarjetas de débito y crédito.
+                        </p>
                     </div>
-                    <p class="description-benefy">Tenemos certificado que garantiza tu información personal y de tus tarjetas de débito y crédito.
-                    </p>
                 </div>
-                <div class="card-benefy">
-                    <p class="title-benefy">Ofertas Exclusivas</p>
-                    <div class="my-3">
-                        <img src="assets/images/icon-1.svg" alt="pagos">
+
+                <div class="card-contain">
+                    <div class="card-benefy">
+                        <p class="title-benefy">Ofertas Exclusivas</p>
+                        <div class="my-3 d-flex justify-content-center">
+                            <img src="assets/images/icon-1.svg" alt="pagos">
+                        </div>
+                        <p class="description-benefy">Realiza tus compras 100% online desde la comodidad de tu hogar.
+                        </p>
                     </div>
-                    <p class="description-benefy">Realiza tus compras 100% online desde la comodidad de tu hogar.  
-                    </p>
                 </div>
-                <div class="card-benefy">
-                    <p class="title-benefy">Envío a Domicilio</p>
-                    <div class="my-3">
-                        <img src="assets/images/icon-1.svg" alt="pagos">
+                <div class="card-contain">
+                    <div class="card-benefy">
+                        <p class="title-benefy">Envío a Domicilio</p>
+                        <div class="my-3 d-flex justify-content-center">
+                            <img src="assets/images/icon-1.svg" alt="pagos">
+                        </div>
+                        <p class="description-benefy">Pide online con Delivery Gratis y recibe tu pedido en la puerta de
+                            tu casa.
+                        </p>
                     </div>
-                    <p class="description-benefy">Pide online con Delivery Gratis  y recibe tu pedido en la puerta de tu casa.  
-                    </p>
                 </div>
+
             </div>
         </section>
 
@@ -251,9 +265,10 @@
 
 
         <!-- Promotions -->
-        <section class="flex-promotions d-flex flex-wrap justify-content-between container responsive-promotion">
+        <section
+            class="flex-promotions arrow-slick-pro d-flex flex-wrap justify-content-between container responsive-promotion">
             <!-- Promotions Bembos -->
-            
+
             <div class="card-promotion " data-product="Personal Bembos" data-brand="Bembos">
                 <a target="_blank" href="https://www.bembos.com.pe/menu/promociones-bembos-delivery/personal-bembos">
                     <div class="position-relative">
@@ -440,22 +455,29 @@
             <div class="border-legal">
                 <div class="accordion" id="accordionExample">
                     <div class="accordion-item">
-                      <h2 class="accordion-header" id="headingOne">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                          Términos y Condiciones
-                        </button>
-                      </h2>
-                      <div id="collapseOne" class="accordion-collapse collapse " aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                        <div class="accordion-body text-legal-2">
-                          <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                Términos y Condiciones
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse " aria-labelledby="headingOne"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body text-legal-2">
+                                <strong>This is the first item's accordion body.</strong> It is shown by default, until
+                                the collapse plugin adds the appropriate classes that we use to style each element.
+                                These classes control the overall appearance, as well as the showing and hiding via CSS
+                                transitions. You can modify any of this with custom CSS or overriding our default
+                                variables. It's also worth noting that just about any HTML can go within the
+                                <code>.accordion-body</code>, though the transition does limit overflow.
+                            </div>
                         </div>
-                      </div>
                     </div>
-                    
-                   
-                  </div>
+
+
+                </div>
             </div>
-            
+
         </section>
 
     </main>
@@ -464,21 +486,155 @@
     </footer>
 
 
-    <!-- Modal -->
+    <!-- Modal Legal 1 -->
     <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
         aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-dialog modal-lg modal-dialog-centered  modal-dialog-scrollable">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+                    <h5 class="modal-title title-mod-style" id="staticBackdropLabel">Términos y Condiciones</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body modal-legal-body">
+                    El cliente declara que la información es veraz y ser mayor de 18 años. Asimismo, autoriza a BEMBOS
+                    S.A.C, con R.U.C. Nº 20101087647, con domicilio en Calle Camino Real N° 1801, Mz. A, Lt. 4, Santiago
+                    de Surco, Lima (“NGR”), a afiliarlo al programa de Beneficiarios de Promociones para que Usted pueda
+                    recibir descuentos y promociones para usarlos en sus compras futuras (el “Programa”).
+
+                    Autorización para el tratamiento de Datos Personales: La información proporcionada al inscribirse y
+                    participar en el programa y aquella obtenida con anterioridad por cualquier medio (público o de
+                    terceros), incluyendo su historial de compras en NGR (pasadas, presentes y futuras), así como las
+                    que se brinden a través de cualquier medio de venta, es considerada datos personales. Usted nos da
+                    su consentimiento libre, previo, expreso e informado, de forma indefinida para conservar de manera
+                    segura y tratar sus datos personales en nuestro banco de datos “CLIENTES” (código N° 15000), con la
+                    finalidad de: i) ejecutar el Programa, realizar estudios de mercado, registrar y analizar
+                    historiales de compra y elaborar perfiles de compra, efectuar acciones de publicidad y prospección
+                    comercial, ofrecimiento de promociones comerciales, fines estadísticos o históricos, comercio
+                    electrónico, remitir (vía medio físico, electrónico o telefónico) publicidad, obsequios, información
+                    de ofertas y/o promociones (personalizadas o generales) de productos y/o servicios, para lo cual NGR
+                    podrá valerse de los terceros (encargados de tratamiento) difundidos en
+                    www.bembos.com.pe/encargados-del-tratamiento, situados dentro y fuera del Perú, por lo que se
+                    producirá una transferencia internacional de datos; y ii) Ceder, transferir, o comunicar sus datos
+                    personales, a nivel nacional y/o transfronterizo a las empresas del Grupo Intercorp y sus Socios
+                    Estratégicos difundidas en www.bembos.com.pe/empresas, a efecto de que dichas empresas realicen para
+                    sí mismas los tratamientos indicados en el ítem i). El CLIENTE podrá ejercitar los derechos de
+                    información, acceso, actualización, rectificación, inclusión, cancelación, oposición y tratamiento
+                    objetivo que le confiere la Ley No. 29733, y su Reglamento; a través del portal web
+                    www.bembos.com.pe/arco
+
+
+                </div>
+                <div class="modal-footer justify-content-center">
+
+                    <button type="button" class="btn btn-send" data-bs-dismiss="modal">Aceptar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Legal 2 -->
+    <div class="modal fade" id="staticBackdrop1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered  modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title title-mod-style" id="staticBackdropLabel1">Términos y Condiciones</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body modal-legal-body">
+                    Esta Política de Privacidad se aplica al procesamiento de Datos Personales recopilados por BEMBOS
+                    S.A.C (en adelante “NGR”) a través de su sitio web y aplicaciones digitales, de conformidad con lo
+                    dispuesto por la Ley N° 29733, Ley de Protección de Datos Personales, y su reglamento aprobado por
+                    Decreto Supremo N° 003-2013-JUS (“Reglamento”).
+
+                    El titular del banco de datos en el que se almacenarán los datos personales que nos proporcionarás
+                    es NGR con RUC N° 20101087647, con domicilio en Calle Camino Real N° 1801, Mz. A, Lt. 4, Santiago de
+                    Surco, Lima. La existencia de este banco de datos personales ha sido declarada a la Autoridad
+                    Nacional de Protección de Datos Personales, mediante su inscripción en el Registro Nacional de
+                    Protección de Datos Personales, bajo la denominación “CLIENTES” y el código N° 15000.
+
+                    1. OBJETIVO
+                    La presente Política de Tratamiento de Datos Personales expresa cómo recolectamos, utilizamos y/o
+                    transferimos su información personal. También explica cómo hacer uso de tus derechos ARCO (Acceso,
+                    Rectificación, Cancelación y Oposición) previstos en la Normativa de Protección de Datos Personales.
+
+                    2. CAMBIOS EN ESTA POLÍTICA DE PRIVACIDAD
+                    Con motivo de la mejora continua de nuestros procesos, NGR podrá unilateralmente realizar mejoras
+                    continuas y modificaciones a esta Política de Privacidad, a las cuales usted da su conformidad. Por
+                    favor, verifique estos términos regularmente para consultar los cambios que puedan haber existido.
+
+                    3. INFORMACIÓN
+                    Solo recolectamos los datos personales que usted desee proporcionar o que son necesarios para los
+                    fines que se describen en el punto 4 de la presente Política. NGR recolecta información personal
+                    directa como nombre, teléfono, correo electrónico, fecha de nacimiento y dirección, a través de
+                    formularios electrónicos u otros formatos; número de tarjeta de crédito en el caso de las compras a
+                    través de nuestra tienda virtual, información sobre preferencias del usuario cuando visita una
+                    página web o redes sociales tales como Facebook, Twitter, Instagram, por el uso de cookies,
+                    direcciones IP, conexiones y sistemas de información; todo ello en estricto cumplimiento de la Ley
+                    de Protección de Datos Personales.
+
+                    Al ingresar tus datos, declaras y certificas que ellos corresponden a tu persona y que son
+                    verdaderos, exactos, auténticos, completos, correctos y que eres mayor de edad.
+
+                    4. FINALIDADES DEL TRATAMIENTO DE SUS DATOS PERSONALES
+                    Los datos personales que usted libremente proporciona a través del sitio web, grabaciones telefónica
+                    u otros medios, serán tratados para los siguientes fines: Gestionar las compras o solicitudes para
+                    lo cual NGR podrá valerse de terceros (encargados de tratamiento) que apreciarás haciendo click en
+                    www.bembos.com.pe/encargados-del-tratamiento; invitarlo a completar nuestras encuestas de
+                    satisfacción luego de realizada su compra; gestión y administración interna de nuestra lista de
+                    clientes y usuarios; o, como fuente de consulta. Según se indica en el referido enlace, algunos de
+                    los terceros se encuentran situados fuera del Perú, por lo que se producirá una transferencia
+                    internacional de datos. Si bien la entrega de sus datos personales es libre y voluntaria, podría
+                    ocurrir que usted no cubra los requisitos para que se procesen sus pedidos.
+
+                    5. EJERCICIO DE SUS DERECHOS ARCO
+                    Usted puede revocar su consentimiento o ejercer sus derechos que como titular de datos personales le
+                    asisten (acceso, rectificación, cancelación, oposición, información o revocación), de manera
+                    gratuita. Podrá ejercitar estos derechos a través del portal web www.bembos.com.pe/arco .
+
+                    6. PLAZO DE CONSERVACIÓN DE LOS DATOS Y MEDIDAS DE SEGURIDAD
+                    Conservaremos tus datos personales mientras no nos solicites la cancelación de los mismos, en cuyo
+                    caso procederemos conforme al segundo párrafo del artículo 2.2 del Reglamento. NGR tiene
+                    implementadas las medidas técnicas, organizativas y legales que garantizan la seguridad y
+                    confidencialidad de tus datos personales.
+
+
+                </div>
+                <div class="modal-footer justify-content-center">
+
+                    <button type="button" class="btn btn-send" data-bs-dismiss="modal">Aceptar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Mensaje de Confirmación-->
+    <div class="modal fade" id="confirmation" tabindex="-1" aria-labelledby="confirmation" aria-hidden="true">
+        <div class="modal-dialog confirmation-mod modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel"></h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    ...
+                    <p class="title-mod-style font-modal">
+                        Registro Exitoso
+                    </p>
+                    <div class="text-center">
+                        <img class="p-3" src="assets/images/ok.svg" alt="">
+                    </div>
+                    <p class="text-center modal-confirmation-body">
+                        Gracias por registrarte.
+
+                    </p>
+                    <p class="text-center modal-confirmation-body">
+                        Pronto recibiras Novedades y Promociones exclusivas.
+                    </p>
+
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Understood</button>
+                <div class="modal-footer d-flex justify-content-center">
+
+                    <button type="button" class="btn btn-primary btn-send" data-bs-dismiss="modal">Aceptar</button>
                 </div>
             </div>
         </div>
