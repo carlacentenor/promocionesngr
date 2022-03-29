@@ -1,3 +1,20 @@
+function cerrar(){
+  //console.log("Llegas")
+  limpiar();
+  $('#confirmation').modal('hide');
+}
+
+
+function limpiar(){
+  $('#name').val('');
+  $('#email').val('');
+  $('#phone').val('');
+  $('#dni').val('');
+
+  document.getElementById("envioData").disabled = true;
+  $( "#flexCheckDefault" ).prop( "checked", false );
+}
+
 function aceptar(){
     if ($('#flexCheckDefault').prop('checked')) {
       document.getElementById("envioData").disabled = false;
@@ -97,9 +114,7 @@ function aceptar(){
   
   }
   
-  function sendData(){
-          
-    
+  function sendData(){    
   
   var body={
       'name': $('#name').val() ,
