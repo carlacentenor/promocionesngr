@@ -73,12 +73,12 @@ function aceptar(){
       return false;
     }else{
         if(validateNumber(camp)){
-          $('#msgPhone').html('Dato no numérico');
+          $('#msgPhone').html('El celular solo puede contener números');
           return false;
         }
       
         if(camp.length < 9){
-          $('#msgPhone').html('Formato de telefono erroneo');
+          $('#msgPhone').html('Revisa el número, faltan algunos digitos');
           return false;
         }
       
@@ -96,12 +96,12 @@ function aceptar(){
       return false;
     }else{
           if(validateNumber(camp)){
-            $('#msgDni').html('Dato no numérico');
+            $('#msgDni').html('El DNI solo puede contener números');
             return false;
           }
         
           if(camp.length != 8){
-            $('#msgDni').html('Formato de dni erroneo');
+            $('#msgDni').html('Revisa el número, faltan algunos digitos');
             return false;
           }
         

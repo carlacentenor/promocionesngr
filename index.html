@@ -141,36 +141,40 @@
                             <div class="container">
                                 <div class="mb-4">
 
-                                    <input type="text" id="name" name="name" class="form-control input-form" placeholder=" Nombre completo">
+                                    <input type="text" id="name" name="name" class="form-control input-form"
+                                        placeholder=" Nombre completo">
                                     <!-- Message Validation -->
-                                     <div id="msgName" class="invalid-message">
-                                        
-                                      </div>
+                                    <div id="msgName" class="invalid-message">
+
+                                    </div>
                                 </div>
                                 <div class="mb-4">
 
                                     <input type="email" id="email" name="email" class="form-control input-form"
                                         placeholder=" Correo electrónico">
-                                     <div id="msgEmail" class="invalid-message">
-                                        
-                                     </div>
+                                    <div id="msgEmail" class="invalid-message">
+
+                                    </div>
                                 </div>
                                 <div class="mb-4">
 
-                                    <input type="number" id="phone" name="phone" class="form-control input-form" placeholder=" Celular">
-                                     <div id="msgPhone" class="invalid-message">
-                                        
-                                      </div>
+                                    <input type="number" id="phone" name="phone" class="form-control input-form"
+                                        placeholder=" Celular">
+                                    <div id="msgPhone" class="invalid-message">
+
+                                    </div>
                                 </div>
                                 <div class="mb-4">
 
-                                    <input type="number" id="dni" name="dni" class="form-control input-form" placeholder=" DNI">
-                                     <div id="msgDni" class="invalid-message">
-                                        
-                                      </div> 
+                                    <input type="number" id="dni" name="dni" class="form-control input-form"
+                                        placeholder=" DNI">
+                                    <div id="msgDni" class="invalid-message">
+
+                                    </div>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" onclick="aceptar()">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"
+                                        onclick="aceptar()">
                                     <label class="form-check-label text-legal-form" for="flexCheckDefault">
                                         Acepto los <a class="link-legal" data-bs-toggle="modal"
                                             data-bs-target="#staticBackdrop">Términos y Condiciones</a> y la política de
@@ -185,7 +189,16 @@
 
                                 </div>
                                 <div class="text-center mt-4">
-                                    <button class="btn btn-primary btn-send" id="envioData" type="button" onclick="sendData()" disabled>Enviar</button>
+                                    <button class="btn btn-primary btn-send" id="envioData" type="button"
+                                        onclick="sendData()" disabled>Enviar</button>
+
+                                    <!-- Button Loading -->
+                                    <!-- <button class="btn btn-primary btn-send" type="button" disabled>
+                                        Enviando...  
+                                        <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                                        
+                                      </button> -->
+
                                 </div>
 
                             </div>
@@ -611,7 +624,8 @@
     </div>
 
     <!-- Modal Mensaje de Confirmación-->
-    <div class="modal fade" id="confirmation" tabindex="-1" data-keyboard="false" data-backdrop="static" aria-labelledby="confirmation" aria-hidden="true">
+    <div class="modal fade" id="confirmation" tabindex="-1" data-keyboard="false" data-backdrop="static"
+        aria-labelledby="confirmation" aria-hidden="true">
         <div class="modal-dialog confirmation-mod modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
@@ -636,29 +650,61 @@
                 </div>
                 <div class="modal-footer d-flex justify-content-center">
 
-                    <button type="button" class="btn btn-primary btn-send"  onclick="cerrar()">Aceptar</button>
+                    <button type="button" class="btn btn-primary btn-send" onclick="cerrar()">Aceptar</button>
                 </div>
             </div>
         </div>
     </div>
 
 
-    <div class="modal fade" id="loading" tabindex="-1" aria-labelledby="loading" data-keyboard="false" data-backdrop="static" aria-hidden="true">
+    <!-- Modal Mensaje de Error-->
+    <div class="modal fade" id="error" tabindex="-1" data-keyboard="false" data-backdrop="static"
+        aria-labelledby="error" aria-hidden="true">
+        <div class="modal-dialog confirmation-mod modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel"></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="title-mod-style font-modal">
+                        ¡Ups! Ha ocurrido un error inesperado
+                    </p>
+                    <div class="text-center">
+                        <img class="p-3" src="assets/images/bad.svg" alt="">
+                    </div>
+                    <p class="text-center modal-confirmation-body">
+                        Por favor vuelve a intentarlo.
+
+                    </p>
+
+
+                </div>
+                <div class="modal-footer d-flex justify-content-center">
+
+                    <button type="button" class="btn btn-primary btn-send" onclick="cerrar()">Aceptar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="loading" tabindex="-1" aria-labelledby="loading" data-keyboard="false"
+        data-backdrop="static" aria-hidden="true">
         <div class="modal-dialog loading-mod modal-dialog-centered">
             <div class="modal-content">
-               
+
                 <div class="modal-body">
                     <p class="title-mod-style font-modal">
                         Cargando ...
                     </p>
-                    
+
                     <p class="text-center modal-loading-body">
                         Espere un momento.
 
-                    </p>                    
+                    </p>
 
                 </div>
-                
+
             </div>
         </div>
     </div>
@@ -671,7 +717,7 @@
     </script>
 
     <script src="js/app.js"></script>
-    
+
 </body>
 
 </html>
