@@ -611,7 +611,7 @@
     </div>
 
     <!-- Modal Mensaje de Confirmación-->
-    <div class="modal fade" id="confirmation" tabindex="-1" aria-labelledby="confirmation" aria-hidden="true">
+    <div class="modal fade" id="confirmation" tabindex="-1" data-keyboard="false" data-backdrop="static" aria-labelledby="confirmation" aria-hidden="true">
         <div class="modal-dialog confirmation-mod modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
@@ -638,6 +638,27 @@
 
                     <button type="button" class="btn btn-primary btn-send"  onclick="cerrar()">Aceptar</button>
                 </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="loading" tabindex="-1" aria-labelledby="loading" data-keyboard="false" data-backdrop="static" aria-hidden="true">
+        <div class="modal-dialog loading-mod modal-dialog-centered">
+            <div class="modal-content">
+               
+                <div class="modal-body">
+                    <p class="title-mod-style font-modal">
+                        Cargando ...
+                    </p>
+                    
+                    <p class="text-center modal-loading-body">
+                        Espere un momento.
+
+                    </p>                    
+
+                </div>
+                
             </div>
         </div>
     </div>

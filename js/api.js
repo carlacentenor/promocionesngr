@@ -114,7 +114,9 @@ function aceptar(){
   
   }
   
-  function sendData(){    
+  function sendData(){   
+  
+    document.getElementById("envioData").disabled = true;
   
   var body={
       'name': $('#name').val() ,
@@ -129,24 +131,46 @@ function aceptar(){
   validateDni(body.dni);
   
   if(validateName(body.name) && validateEmail(body.email) && validatePhone(body.phone) && validateDni(body.dni)){
+    setTimeout(function(){ 
+      
+    $.ajax({
+      url: "https://pw66s5uvcg.execute-api.us-east-1.amazonaws.com/test/ngrclient",
+      //jsonp: "callback",
+      type: "POST",
+      data: JSON.stringify(body),
+      async: false,
+      contentType: "application/json",
+      dataType: 'json',
+      beforeSend: function() {
+        // setting a timeout
+        /*$(placeholder).addClass('loading');
+        i++;*/
+        //document.getElementById("envioData").disabled = false;
+        //$("#product_id").html('<option> Loading ...</option>');
+        
+        $("#envioData").prop('disabled', true); // disable button
   
-  $.ajax({
-    url: "https://pw66s5uvcg.execute-api.us-east-1.amazonaws.com/test/ngrclient",
-    //jsonp: "callback",
-    type: "POST",
-    data: JSON.stringify(body),
-    async: false,
-    contentType: "application/json",
-    dataType: 'json',    
-    success: function (data) {
-
-        $('#confirmation').modal('show');
-        //callback(data);
-        console.log(JSON.stringify(data));
-        //console.log(data);
-    }
-    });
+        
+      },  
+      success: function (data) {
+          $('#loading').modal('hide');
+          $('#confirmation').modal('show');
+          //callback(data);
+          console.log(JSON.stringify(data));
+          //console.log(data);
+      },
+      error: function(data) { // if error occured
+        //$('#loading').modal('hide');
+        document.getElementById("envioData").disabled = false;
+        return false;
+      }
+      });
+  
+  }, 1000);
+  
   }else{
+    $('#loading').modal('hide');
+    document.getElementById("envioData").disabled = false;
     return false;
   }
   }
