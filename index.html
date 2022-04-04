@@ -193,7 +193,7 @@
                                         onclick="sendData()" disabled>Enviar</button>
 
                                     <!-- Button Loading -->
-                                    <!-- <button class="btn btn-primary btn-send" type="button" disabled>
+                                    <!-- <button class="btn btn-primary btn-send btn-load" id="btnLoad" type="button" disabled>
                                         Enviando...  
                                         <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
                                         
@@ -628,7 +628,7 @@
         aria-labelledby="confirmation" aria-hidden="true">
         <div class="modal-dialog confirmation-mod modal-dialog-centered">
             <div class="modal-content">
-                
+
                 <div class="modal-body">
                     <p class="title-mod-style font-modal">
                         Registro Exitoso
@@ -659,7 +659,7 @@
         aria-labelledby="error" aria-hidden="true">
         <div class="modal-dialog confirmation-mod modal-dialog-centered">
             <div class="modal-content">
-               
+
                 <div class="modal-body">
                     <p class="title-mod-style font-modal">
                         ¡Ups! Ha ocurrido un error inesperado
@@ -691,7 +691,10 @@
                     <p class="title-mod-style font-modal">
                         Cargando ...
                     </p>
-
+                    <div class="text-center">
+                        <img class="loading-s" src="assets/images/spin.gif" alt="">
+                    </div>
+                    
                     <p class="text-center modal-loading-body">
                         Espere un momento.
 
