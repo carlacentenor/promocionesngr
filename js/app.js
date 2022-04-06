@@ -13,12 +13,9 @@ if (mediaQuery.matches) {
     autoplaySpeed: 2000,
     arrows: false
   });
-
-
   $('.responsive-card').slick();
-
-
 }
+
 
 
 $('.responsive-promotion').slick({
@@ -62,12 +59,12 @@ $('.responsive-promotion').slick({
 
 // Modal det términos y condiciones
 
-var myModal = document.getElementById('myModal')
-var myInput = document.getElementById('myInput')
+// var myModal = document.getElementById('myModal');
+// var myInput = document.getElementById('myInput');
 
-myModal.addEventListener('shown.bs.modal', function () {
-  myInput.focus()
-})
+// myModal.addEventListener('shown.bs.modal', function () {
+//   myInput.focus()
+// });
 
 
 // Tag Manager
@@ -76,6 +73,13 @@ const brandsHeader = document.querySelectorAll('.brands-header');
 const bannerShedule = document.querySelector('.bn-schedule-js');
 const products = document.querySelectorAll('.card-promotion');
 const brandsFooter = document.querySelectorAll('.card-schedule');
+
+// FLechas Carrusel Promociones
+const arrowPrev = document.querySelector('.slick-prev');
+const arrowNext = document.querySelector('.slick-next');
+
+//Formulario
+const buttonSend = document.querySelector('.btn-send');
 
 // Data Layer Brands Header
 brandsHeader.forEach(element => {
@@ -86,9 +90,9 @@ brandsHeader.forEach(element => {
   });
 });
 
-bannerShedule.addEventListener('click', () => {
-  BannerSchedule();
-});
+// bannerShedule.addEventListener('click', () => {
+//   BannerSchedule();
+// });
 
 products.forEach(element => {
   element.addEventListener('click', () => {
@@ -109,11 +113,22 @@ brandsFooter.forEach(element => {
   });
 });
 
+arrowPrev.addEventListener('click', () => {
+  console.log('izquierda');
+  ArrowPrev();
+});
+
+
+arrowNext.addEventListener('click', () => {
+  console.log('Derecha');
+  ArrowNext();
+});
+
 // Data Layer
 const HeaderBrand = (brand) => {
   dataLayer.push({
     'event': 'virtualEvent',
-    'category': 'Landing Promociones NGR',
+    'category': 'Landing multimarca',
     'action': 'Selección Marca',
     'label': brand
   });
@@ -134,8 +149,8 @@ const BannerSchedule = () => {
 const ProductsBrands = (product, brand) => {
   dataLayer.push({
     'event': 'virtualEvent',
-    'category': 'Landing Promociones NGR',
-    'action': 'Selección Producto',
+    'category': 'Landing multimarca',
+    'action': 'Selección de Producto',
     'label': `${product}-${brand}`
   });
 
@@ -150,3 +165,25 @@ const BrandsSchedule = (brand) => {
   });
 
 }
+
+const ArrowPrev = () => {
+  dataLayer.push({
+    'event': 'virtualEvent',
+    'category': 'Landing multimarca',
+    'action': 'Selección de flecha de interacción',
+    'label': 'Izquierda'
+  })
+}
+
+const ArrowNext = () => {
+  dataLayer.push({
+    'event': 'virtualEvent',
+    'category': 'Landing multimarca',
+    'action': 'Selección de flecha de interacción',
+    'label': 'Derecha'
+  })
+}
+
+
+
+

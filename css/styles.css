@@ -113,6 +113,7 @@ a {
 }
 
 .flex-brands-header div {
+    text-align: center;
     width: 100%;
 }
 
@@ -852,7 +853,9 @@ a {
 .title-awards {
     font-family: var(--omnes-medium);
     font-size: 18px;
-    line-height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 
@@ -862,6 +865,7 @@ a {
     font-size: 20px;
     line-height: 27px;
     margin-bottom: 0;
+    margin: .5em 0;
 }
 
 @media screen and (min-width:768px) {
@@ -869,11 +873,13 @@ a {
 
         font-size: 24px;
         line-height: 27px;
+        
     }
 
     .subtitle-awards {
         font-size: 28px;
         line-height: 27px;
+        margin: 1em 0;
     }
 }
 
@@ -902,7 +908,7 @@ a {
 
 .img-bb-f {
     position: absolute;
-    top: 96px;
+    top: 128px;
     right: 0px;
 }
 
@@ -1205,4 +1211,18 @@ a {
 
 .loading-s {
     width: 50px;
+}
+
+.number-g{
+    font-size: 50px;
+    margin-right: 10px;
+}
+
+
+@media screen and (min-width:768px) { 
+
+    .number-g{
+        font-size: 70px;
+        margin-right: 10px;
+    }
 }

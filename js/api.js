@@ -1,4 +1,4 @@
-function cerrar(){
+function cerrar() {
   //console.log("Llegas")
   limpiar();
   $('#confirmation').modal('hide');
@@ -6,137 +6,151 @@ function cerrar(){
 }
 
 
-function limpiar(){
+function limpiar() {
   $('#name').val('');
   $('#email').val('');
   $('#phone').val('');
   $('#dni').val('');
 
   document.getElementById("envioData").disabled = true;
-  $( "#flexCheckDefault" ).prop( "checked", false );
+  $("#flexCheckDefault").prop("checked", false);
 }
 
-function aceptar(){
-    if ($('#flexCheckDefault').prop('checked')) {
-      document.getElementById("envioData").disabled = false;
-    }else{
-      document.getElementById("envioData").disabled = true;
-    }
-  }
-  
-  function validateRequired(camp){
-    if(camp === ""){    
-      return true;
-    }
-    return false;
-  }
-  
-  function validateNumber(camp){
-    if(isNaN(camp)){    
-      return true;
-    }
-    return false;
-  }
-  
-  function validateName(camp){
-    if(validateRequired(camp)){
-        $('#msgName').html('Dato obligatorio');
-        return false;
-    }else{
-        $('#msgName').html('');
-        return true; 
-    }
-     
-  }
-  
-  function validateEmail(camp){
-    if(validateRequired(camp)){
-        $('#msgEmail').html('Dato obligatorio');
-        return false;
-    }else{
-        let expr = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-        if (!expr.test(camp)){      
-            $('#msgEmail').html('El email ingresado no es válido');
-            return false;
-        }else{
-          $('#msgEmail').html('');
-          return true;
-        }
-    }
-  
-   
-    
-  }
-  
-  function validatePhone(camp){
-    if(validateRequired(camp)){
-      $('#msgPhone').html('Dato obligatorio');
-      return false;
-    }else{
-        if(validateNumber(camp)){
-          $('#msgPhone').html('El celular solo puede contener números');
-          return false;
-        }
-      
-        if(camp.length < 9){
-          $('#msgPhone').html('Revisa el número, faltan algunos digitos');
-          return false;
-        }
-      
-        $('#msgPhone').html('');
-        return true;
-    }
-  
-    
-  
-  }
-  
-  function validateDni(camp){
-    if(validateRequired(camp)){
-      $('#msgDni').html('Dato obligatorio');
-      return false;
-    }else{
-          if(validateNumber(camp)){
-            $('#msgDni').html('El DNI solo puede contener números');
-            return false;
-          }
-        
-          if(camp.length != 8){
-            $('#msgDni').html('Revisa el número, faltan algunos digitos');
-            return false;
-          }
-        
-          $('#msgDni').html('');
-          return true;
-
-    }
-  
-  
-  
-  }
-  
-  function sendData(){   
-  
+function aceptar() {
+  if ($('#flexCheckDefault').prop('checked')) {
+    document.getElementById("envioData").disabled = false;
+  } else {
     document.getElementById("envioData").disabled = true;
-  
-  var body={
-      'name': $('#name').val() ,
-      'email': $('#email').val(),
-      'phone': $('#phone').val(),
-      'dni': $('#dni').val()
+  }
+}
+
+function validateRequired(camp) {
+  if (camp === "") {
+    return true;
+  }
+  return false;
+}
+
+function validateNumber(camp) {
+  if (isNaN(camp)) {
+    return true;
+  }
+  return false;
+}
+
+function validateName(camp) {
+  if (validateRequired(camp)) {
+    $('#msgName').html('Dato obligatorio');
+
+    MessageErrorForm('Falta completar datos'); // Analytics - Tag Manager
+
+    return false;
+  } else {
+    $('#msgName').html('');
+    return true;
+  }
+
+}
+
+function validateEmail(camp) {
+  if (validateRequired(camp)) {
+    $('#msgEmail').html('Dato obligatorio');
+
+    MessageErrorForm('Falta completar datos');  // Analytics - Tag Manager
+
+    return false;
+  } else {
+    let expr = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+    if (!expr.test(camp)) {
+      $('#msgEmail').html('El email ingresado no es válido');
+      MessageErrorForm('Error en formato de email');
+      return false;
+    } else {
+      $('#msgEmail').html('');
+      return true;
+    }
+  }
+
+
+
+}
+
+function validatePhone(camp) {
+  if (validateRequired(camp)) {
+    $('#msgPhone').html('Dato obligatorio');
+    MessageErrorForm('Falta completar datos');
+    return false;
+  } else {
+    if (validateNumber(camp)) {
+      $('#msgPhone').html('El celular solo puede contener números');
+      MessageErrorForm('Solo debe ingresar números ');
+
+      return false;
+    }
+
+    if (camp.length < 9) {
+      $('#msgPhone').html('Revisa el número, faltan algunos digitos');
+      MessageErrorForm('Error en cantidad de digitos');
+      return false;
+    }
+
+    $('#msgPhone').html('');
+    return true;
+  }
+
+
+
+}
+
+function validateDni(camp) {
+  if (validateRequired(camp)) {
+    $('#msgDni').html('Dato obligatorio');
+    MessageErrorForm('Falta completar datos');
+    return false;
+  } else {
+    if (validateNumber(camp)) {
+      $('#msgDni').html('El DNI solo puede contener números');
+      MessageErrorForm('Solo debe ingresar números ');
+      return false;
+    }
+
+    if (camp.length != 8) {
+      $('#msgDni').html('Revisa el número, faltan algunos digitos');
+      MessageErrorForm('Error en cantidad de digitos');
+      return false;
+    }
+
+    $('#msgDni').html('');
+    return true;
+
+  }
+
+
+
+}
+
+function sendData() {
+
+  document.getElementById("envioData").disabled = true;
+
+  var body = {
+    'name': $('#name').val(),
+    'email': $('#email').val(),
+    'phone': $('#phone').val(),
+    'dni': $('#dni').val()
   };
 
   validateName(body.name);
   validateEmail(body.email);
   validatePhone(body.phone);
   validateDni(body.dni);
-  
-  if(validateName(body.name) && validateEmail(body.email) && validatePhone(body.phone) && validateDni(body.dni)){
+
+  if (validateName(body.name) && validateEmail(body.email) && validatePhone(body.phone) && validateDni(body.dni)) {
     $('#loading').modal('show');
     try {
       //$('#error').modal('show');
-      setTimeout(function(){ 
-      
+      setTimeout(function () {
+
         $.ajax({
           url: "https://pw66s5uvcg.execute-api.us-east-1.amazonaws.com/test/ngrclientssss",
           //jsonp: "callback",
@@ -145,7 +159,7 @@ function aceptar(){
           async: false,
           contentType: "application/json",
           dataType: 'json',
-          beforeSend: function() {
+          beforeSend: function () {
             // setting a timeout
             /*$(placeholder).addClass('loading');
             i++;*/
@@ -154,38 +168,82 @@ function aceptar(){
             //$('#loading').modal('show');
             $('#loading').modal('hide');
             $("#envioData").prop('disabled', true); // disable button
-      
-            
-          },  
-          success: function (data) {
-              
-              $('#confirmation').modal('show');
-              //callback(data);
-              console.log(JSON.stringify(data));
-              //console.log(data);
+
+
           },
-          error: function(data) { // if error occured
+          success: function (data) {
+
+            $('#confirmation').modal('show');
+
+            CorrectSendForm(); // Data Layer ---- No Borrar ---- Google tag Manager
+
+            //callback(data);
+            console.log(JSON.stringify(data));
+            //console.log(data);
+          },
+          error: function (data) { // if error occured
             //$('#loading').modal('hide');
             $('#error').modal('show');
             document.getElementById("envioData").disabled = false;
+
+            IntentionSendForm();  // Data Layer ---- No Borrar ---- Google tag Manager
+
             return false;
           }
-          });
-      
+        });
+
       }, 1000);
-      
+
     } catch (error) {
       //$('#error').modal('show');
       $('#error').modal('show');
       document.getElementById("envioData").disabled = false;
+
+      IntentionSendForm();  // Data Layer ---- No Borrar ---- Google tag Manager
+
       return false;
-      
+
     }
-  
-  
-  }else{
+
+
+  } else {
     $('#loading').modal('hide');
     document.getElementById("envioData").disabled = false;
     return false;
   }
-  }
+}
+
+
+
+// Data Layer ---- No Borrar ---- Funciones para Google tag Manager
+
+const IntentionSendForm = () => {
+  dataLayer.push({
+    'event': 'virtualEvent',
+    'category': 'Landing multimarca',
+    'action': 'Intención de Registro',
+    'label': '(not available)'
+  })
+}
+
+const CorrectSendForm = () => {
+  dataLayer.push({
+    'event': 'virtualEvent',
+    'category': 'Landing multimarca',
+    'action': 'Registro satisfactorio',
+    'label': '(not available)'
+  })
+}
+
+
+const MessageErrorForm = (type) => {
+  dataLayer.push({
+    'event': 'virtualEvent',
+    'category': 'Landing multimarca',
+    'action': 'Errores en formulario',
+    'label': type
+  });
+
+}
+
+  //****************************** */
