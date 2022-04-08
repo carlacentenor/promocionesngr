@@ -152,7 +152,7 @@ function sendData() {
       setTimeout(function () {
 
         $.ajax({
-          url: "https://pw66s5uvcg.execute-api.us-east-1.amazonaws.com/test/ngrclientssss",
+          url: "https://devmm.api-ngr.com/multi-marca/create-client",
           //jsonp: "callback",
           type: "POST",
           data: JSON.stringify(body),
