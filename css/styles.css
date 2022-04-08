@@ -693,7 +693,7 @@ a {
 @media screen and (min-width:768px) {
 
     .bg-container-form {
-        margin: 8em auto 7em;
+        margin: 14em auto 6em;
         max-width: 1000px;
     }
 
@@ -889,7 +889,14 @@ a {
     cursor: pointer;
 }
 
-.link-legal:hover {
+.link-legal-2 {
+    color: var(--gray-ngr-1);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.link-legal:hover,
+.link-legal-2:hover {
     color: var(--orange-ngr);
     font-weight: bold;
 }
@@ -1252,4 +1259,11 @@ a {
 
 .icon-benef {
     width: 53px;
+}
+
+.decor {
+    background-color: var(--orange-ngr);
+    border-radius: 10px;
+    color: #fff;
+    padding: 5px;
 }

@@ -14,10 +14,11 @@ function limpiar() {
 
   document.getElementById("envioData").disabled = true;
   $("#flexCheckDefault").prop("checked", false);
+  $("#flexCheckDefault2").prop("checked", false);
 }
 
 function aceptar() {
-  if ($('#flexCheckDefault').prop('checked')) {
+  if ($('#flexCheckDefault').prop('checked') && $("#flexCheckDefault2").prop('checked')) {
     document.getElementById("envioData").disabled = false;
   } else {
     document.getElementById("envioData").disabled = true;
