@@ -75,8 +75,8 @@ const products = document.querySelectorAll('.card-promotion');
 const brandsFooter = document.querySelectorAll('.card-schedule');
 
 // FLechas Carrusel Promociones
-const arrowPrev = document.querySelector('.slick-prev');
-const arrowNext = document.querySelector('.slick-next');
+const arrowPrev = document.querySelector('.arrows .slick-prev');
+const arrowNext = document.querySelector('.arrows  .slick-next');
 
 //Formulario
 const buttonSend = document.querySelector('.btn-send');
