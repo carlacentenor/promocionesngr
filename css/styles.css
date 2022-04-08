@@ -686,7 +686,7 @@ a {
     background-color: var(--orange-ngr);
     border-radius: 32px;
     min-height: 320px;
-    padding: 1em 1em 3em 1em;
+    padding: 1em 1em 4em 1em;
     position: relative;
 }
 
@@ -873,7 +873,7 @@ a {
 
         font-size: 24px;
         line-height: 27px;
-        
+
     }
 
     .subtitle-awards {
@@ -897,19 +897,28 @@ a {
 .img-dd-f {
     position: absolute;
     top: -27px;
-    left: 42.5%;
+    left: 42.25%;
 }
 
 .img-dd-f img {
     width: 72px;
 }
 
+.img-cw-f {
+    position: absolute;
+    top: 128px;
+    left: 7px;
+}
+
+.img-cw-f img {
+    width: 85px;
+}
 
 
 .img-bb-f {
     position: absolute;
-    top: 128px;
-    right: 0px;
+    top: 130px;
+    right: 10px;
 }
 
 .img-bb-f img {
@@ -921,15 +930,16 @@ a {
 }
 
 .img-pj-f img {
-    width: 125px;
+    width: 93px;
 }
+
 
 
 .img-pp-f {
     position: absolute;
-    bottom: -3px;
-    right: 0;
-    z-index: 9
+
+    bottom: -11px;
+    right: 5px;
 }
 
 .img-pj-f {
@@ -942,19 +952,23 @@ a {
 @media screen and (min-width:768px) {
 
     .img-dd-f img {
-        width: 140px;
+        width: 110px;
     }
 
     .img-bb-f img {
-        width: 140px;
+        width: 120px;
     }
 
     .img-pp-f img {
-        width: 180px;
+        width: 160px;
+    }
+
+    .img-cw-f img {
+        width: 120px;
     }
 
     .img-pj-f img {
-        width: 140px;
+        width: 130px;
     }
 
     .img-dd-f {
@@ -973,7 +987,14 @@ a {
     .img-pp-f {
         position: absolute;
         bottom: -75px;
-        right: -44px;
+        right: -29px;
+        z-index: 9
+    }
+
+    .img-cw-f {
+        position: absolute;
+        top: -71px;
+        left: 170px;
     }
 
     .img-pj-f {
@@ -1118,6 +1139,14 @@ a {
     border-radius: 8px;
 }
 
+.accordion-button {
+    border: none;
+    color: var(--orange-ngr);
+    background-color: transparent;
+    font-family: var(--omnes-semibold);
+    font-size: 20px;
+}
+
 .accordion-button:not(.collapsed) {
     color: var(--orange-ngr);
     background-color: transparent;
@@ -1138,13 +1167,7 @@ a {
 
 }
 
-.accordion-button {
-    border: none;
-    color: var(--orange-ngr);
-    background-color: transparent;
-    font-family: var(--omnes-semibold);
-    font-size: 32px;
-}
+
 
 .accordion-collapse {
     border: none;
@@ -1213,16 +1236,20 @@ a {
     width: 50px;
 }
 
-.number-g{
+.number-g {
     font-size: 50px;
     margin-right: 10px;
 }
 
 
-@media screen and (min-width:768px) { 
+@media screen and (min-width:768px) {
 
-    .number-g{
+    .number-g {
         font-size: 70px;
         margin-right: 10px;
     }
+}
+
+.icon-benef {
+    width: 53px;
 }
