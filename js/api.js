@@ -12,9 +12,9 @@ function limpiar() {
   $('#phone').val('');
   $('#dni').val('');
 
- 
-  $("#flexCheckDefault").prop("checked", false);
-  $("#flexCheckDefault2").prop("checked", false);
+  document.getElementById("envioData").disabled = false;
+  $("#flexCheckDefault").prop("checked", true);
+  $("#flexCheckDefault2").prop("checked", true);
 }
 
 function aceptar() {
