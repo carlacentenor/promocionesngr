@@ -12,7 +12,7 @@ function limpiar() {
   $('#phone').val('');
   $('#dni').val('');
 
-  document.getElementById("envioData").disabled = true;
+ 
   $("#flexCheckDefault").prop("checked", false);
   $("#flexCheckDefault2").prop("checked", false);
 }
