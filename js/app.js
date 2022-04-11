@@ -22,10 +22,10 @@ $('.responsive-promotion').slick({
   dots: true,
   arrows: true,
   infinite: true,
-  speed: 3000,
+  speed: 1500,
   autoplay: true,
-  slidesToShow: 3,
-  slidesToScroll: 3,
+  slidesToShow: 4,
+  slidesToScroll: 1,
 
 
   responsive: [
@@ -35,21 +35,25 @@ $('.responsive-promotion').slick({
         slidesToShow: 3,
         slidesToScroll: 3,
         infinite: true,
-        dots: true
+        dots: true,
+        autoplay: true,
       }
     },
     {
       breakpoint: 600,
       settings: {
         slidesToShow: 2,
-        slidesToScroll: 2
+        slidesToScroll: 2,
+        autoplay: false,
       }
     },
     {
       breakpoint: 480,
       settings: {
         slidesToShow: 2,
-        slidesToScroll: 2
+        slidesToScroll: 1,
+        autoplay: false,
+        speed: 1000,
       }
     }
 

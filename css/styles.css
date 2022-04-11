@@ -503,13 +503,13 @@ a {
 
 @media screen and (min-width:768px) {
     .circle-brand {
-        width: 92px;
-        height: 92px;
+        width: 70px;
+        height: 70px;
 
     }
 
     .logo-circle {
-        width: 70px;
+        width: 50px;
     }
 
     .brand-circle-cw {
