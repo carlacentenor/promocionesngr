@@ -153,7 +153,7 @@ function sendData() {
       setTimeout(function () {
 
         $.ajax({
-          url: "https://devmm.api-ngr.com/multi-marca/create-client",
+          url: "https://api-ngr.com/multi-marca/create-client",
           //jsonp: "callback",
           type: "POST",
           data: JSON.stringify(body),
