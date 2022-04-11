@@ -53,7 +53,7 @@ $('.responsive-promotion').slick({
         slidesToShow: 2,
         slidesToScroll: 1,
         autoplay: false,
-        speed: 1000,
+        speed: 500,
       }
     }
 
