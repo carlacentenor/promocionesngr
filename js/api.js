@@ -90,7 +90,7 @@ function validatePhone(camp) {
     }
 
     if (camp.length < 9) {
-      $('#msgPhone').html('Revisa el número, faltan algunos digitos');
+      $('#msgPhone').html('Revisa el número, solo son 9 dígitos');
       MessageErrorForm('Error en cantidad de digitos');
       return false;
     }
@@ -116,7 +116,7 @@ function validateDni(camp) {
     }
 
     if (camp.length != 8) {
-      $('#msgDni').html('Revisa el número, faltan algunos digitos');
+      $('#msgDni').html('Revisa el número, solo son 8 dígitos');
       MessageErrorForm('Error en cantidad de digitos');
       return false;
     }
